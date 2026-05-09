@@ -1,9 +1,9 @@
 import express from 'express';
-import { rateLimit } from '../../middlewares/rateLimit.middleware';
-import { verifyUserController } from '../../controllers/users/verify-user-controller.controller';
-import { verifyOtpController } from '../../controllers/users/verify-otp-controller.controller';
-import { loginController } from '../../controllers/users/login-controller.controller';
-import { googleLoginController } from '../../controllers/users/google-login.controller';
+import { rateLimit } from '../../middlewares/rateLimit.middleware.js';
+import { verifyUserController } from '../../controllers/users/verify-user-controller.controller.js';
+import { verifyOtpController } from '../../controllers/users/verify-otp-controller.controller.js';
+import { loginController } from '../../controllers/users/login-controller.controller.js';
+import { googleLoginController } from '../../controllers/users/google-login.controller.js';
 
 const router = express.Router();
 
