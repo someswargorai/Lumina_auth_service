@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "typeRoots": ["./node_modules/@types", "./types"],
+
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "types/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}
