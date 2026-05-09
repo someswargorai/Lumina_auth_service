@@ -27,7 +27,7 @@ const verifyOtpController = async (req: Request, res: Response) => {
         if (storedOtp !== otp) {
             return res.status(400).json({ success: false, data: { message: "OTP does not match" } });
         }
-        const hashedPassword = bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, 10);
 
         const user = new schema({
             name,

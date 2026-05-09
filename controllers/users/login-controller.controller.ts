@@ -17,11 +17,11 @@ const   loginController = async (req: Request, res: Response) => {
             return res.status(404).json({ success: false, data: { message: "User not found" } });
         }
 
-        // const isPasswordMatch = await bcrypt.compare(password, user.password);
+        const isPasswordMatch = await bcrypt.compare(password, user.password);
 
-        // if (!isPasswordMatch) {
-        //     return res.status(401).json({ success: false, data: { message: "Invalid credentials" } });
-        // }
+        if (!isPasswordMatch) {
+            return res.status(401).json({ success: false, data: { message: "Invalid credentials" } });
+        }
 
         const token = jwt.sign(
             { id: user._id, email: user.email, name: user.name },
